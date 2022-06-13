@@ -3,11 +3,21 @@
 // jumlah lompatan yang dibutuhkan untuk mencapai posisi X+K >= Y. (5 point)
 
 // x = posisi awal, y=target posisi, k= jarak temputh satu kali lompatan
+
+// function totalLompat(x,y,k){
+//     let lompat = 0
+//     while (x < y) {
+//         x += k
+//         lompat++
+//     }
+//     return lompat
+// }
+
+// more efficient way
 function totalLompat(x,y,k){
     let lompat = 0
-    while (x < y) {
-        x += k
-        lompat++
+    for (let index = x; index <= y; index += k) {
+         lompat++
     }
     return lompat
 }

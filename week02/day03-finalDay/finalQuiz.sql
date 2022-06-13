@@ -61,7 +61,7 @@ select * from t_policy join t_agent on t_agent.agent_code = t_policy.agent_code 
 select 	t_agent.agent_code,
 		t_agent.agent_name,
 		t_agent.agent_office,
-		(t_policy.commission/t_policy.premium)*100 as Basic_Commission 
+		round((t_policy.commission/t_policy.premium)*100) as Basic_Commission 
 	from t_policy 
 	join t_agent on t_agent.agent_code = t_policy.agent_code
 
@@ -76,6 +76,6 @@ select * from
 		t_policy.client_number,
 		t_policy.premium,
 		t_policy.discount, 
-		(t_policy.premium - (t_policy.premium / t_policy.discount)) as total_potongan 
+		round((t_policy.premium - (t_policy.premium / t_policy.discount))) as total_potongan 
 	from t_policy) a where total_potongan >= 1000000 order by total_potongan asc
 
