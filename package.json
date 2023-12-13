@@ -1,9 +1,0 @@
-{
-  "name": "bootcamp",
-  "version": "1.0.0",
-  "main": "index.js",
-  "type": "module",
-  "repository": "https://github.com/uroeMalam/bootcamp-NodeJS.git",
-  "author": "uroeMalam <rizqullahsahputra153@gmail.com>",
-  "license": "MIT"
-}
